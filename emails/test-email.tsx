@@ -22,15 +22,15 @@ const headerURL = 'https://app.gligle.next.efficax.team/header_background.png';
 export const StripeWelcomeEmail = () => (
   <Html>
     <Head></Head>
-    <Preview>You're now ready to make live transactions with Stripe!</Preview>
+    <Preview>Test email</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img style={header} src={headerURL} alt="logo" />
+        <Img height={'100%'} style={header} src={headerURL} alt="logo" />
 
         {/* MAIN */}
 
         <Section style={body}>
-          <Heading style={body__title}>👋 Welcome, John!</Heading>
+          <Heading style={body__title}>👋 Welcome, Yurii!</Heading>
           <Text style={body__text}>
             We’re so glad that you’re now a member of the GreenerTides community. To get started,
             you need to confirm your email address by clicking the button below.
@@ -85,19 +85,20 @@ export const StripeWelcomeEmail = () => (
 export default StripeWelcomeEmail;
 
 const main = {
-  margin: '0 auto',
   backgroundColor: '#f6f9fc',
-  fontFamily: 'Outfit, sans-serif',
+  fontFamily: ' Outfit, sans-serif',
 };
 
 const header = {
   height: '128px',
-  maxWidth: '600px',
   width: '100%',
 };
 
 const container = {
+  backgroundColor: '#ffffff',
   margin: '0 auto',
+  padding: '20px 0 48px',
+  marginBottom: '64px',
 };
 
 const footer = {
@@ -141,7 +142,7 @@ const body__title = {
   color: '#1E1E2E',
   fontSize: '24px',
   fontWeight: 'bold',
-  lineHeigh: '32px',
+  lineHeight: '32px',
 };
 
 const body__text = {
@@ -149,7 +150,7 @@ const body__text = {
   color: '#1E1E2E',
   fontSize: '16px',
   fontWeight: '400',
-  lineHeigh: '24px',
+  lineHeight: '24px',
 };
 
 const body__thanks = {
@@ -157,7 +158,7 @@ const body__thanks = {
   color: '#1E1E2E',
   fontSize: '16px',
   fontWeight: '400',
-  lineHeigh: '24px',
+  lineHeight: '24px',
 };
 
 const body__button = {
@@ -169,7 +170,7 @@ const body__button = {
   color: '#FFFFFF',
   fontSize: '16px',
   fontWeight: '600',
-  lineHeigh: '56px',
+  lineHeight: '56px',
   textAlign: 'center' as const,
   display: 'block',
 };

@@ -1,46 +1,57 @@
 import {
   Body,
   Button,
-  Column,
   Container,
-  Font,
   Head,
   Heading,
-  Hr,
   Html,
-  Img,
   Link,
   Preview,
-  Row,
   Section,
   Text,
 } from '@react-email/components';
 import * as React from 'react';
 
-const headerURL = 'https://app.gligle.next.efficax.team/header_background.png';
+const headerURL = 'https://greenertides.4-com.pro/letter__background.png';
+const headerTitle = 'https://greenertides.4-com.pro/letter__header.jpg';
 
-export const StripeWelcomeEmail = () => (
+export const PasswordRecovery = () => (
   <Html>
     <Head></Head>
-    <Preview>Test email</Preview>
+    <Preview>Password recovery</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img height={'100%'} style={header} src={headerURL} alt="logo" />
-
         {/* MAIN */}
+        <div
+          style={{
+            background: `url(${headerURL})`,
+            height: '128px',
+            backgroundSize: 'contain',
+            position: 'relative',
+          }}>
+          <img
+            style={{
+              width: '198px',
+              height: '24px',
+              padding: '52px 0',
+              display: 'block',
+              margin: '0 auto',
+            }}
+            src={headerTitle}
+            alt="text"
+          />
+        </div>
 
         <Section style={body}>
-          <Heading style={body__title}>👋 Welcome, Yurii!</Heading>
+          <Heading style={body__title}>👋 Hello, Serhiy!</Heading>
           <Text style={body__text}>
-            We’re so glad that you’re now a member of the GreenerTides community. To get started,
-            you need to confirm your email address by clicking the button below.
+            We’ve received your password reset request. To complete password recovery, click the
+            button:
           </Text>
 
           <Button href="https://example.com" style={body__button}>
-            Activate your account
+            Reset your password
           </Button>
-
-          <Text style={body__thanks}>Thanks for joining!</Text>
         </Section>
 
         {/* FOOTER ELEMENT */}
@@ -53,40 +64,31 @@ export const StripeWelcomeEmail = () => (
               random_email@example.com
             </Link>
           </Text>
-          <Row style={footer__links}>
-            <Column>
-              <Link style={bold} href="random_email@example.com">
-                Contact us
-              </Link>
-            </Column>
-            <Column>
-              <Text style={separator}>|</Text>
-            </Column>
-            <Column>
-              <Link style={bold} href="random_email@example.com">
-                Privacy Policy
-              </Link>
-            </Column>
-            <Column>
-              <Text style={separator}>|</Text>
-            </Column>
-            <Column>
-              <Link style={bold} href="random_email@example.com">
-                Mission Statement
-              </Link>
-            </Column>
-          </Row>
+          <div style={{ display: 'inline-block', margin: '30px 0 0 0' }}>
+            <Link style={bold} href="random_email@example.com">
+              Contact us
+            </Link>
+            <Text style={separator}>|</Text>
+            <Link style={bold} href="https://greenertides.4-com.pro/privacy-policy">
+              Privacy Policy
+            </Link>
+            <Text style={separator}>|</Text>
+            <Link style={bold} href="https://greenertides.4-com.pro/mission-statement">
+              Mission Statement
+            </Link>
+          </div>
         </Section>
       </Container>
     </Body>
   </Html>
 );
 
-export default StripeWelcomeEmail;
+export default PasswordRecovery;
 
 const main = {
   backgroundColor: '#f6f9fc',
   fontFamily: ' Outfit, sans-serif',
+  margin: '0 !important',
 };
 
 const header = {
@@ -97,12 +99,11 @@ const header = {
 const container = {
   backgroundColor: '#ffffff',
   margin: '0 auto',
-  padding: '20px 0 48px',
   marginBottom: '64px',
 };
 
 const footer = {
-  padding: '40px',
+  padding: '40px 20px',
   backgroundColor: '#F5F6F8',
 };
 
@@ -119,24 +120,22 @@ const bold = {
   lineHeight: '16px',
   color: '#1E1E2E',
   margin: '0',
+  whiteSpace: 'nowrap',
 };
 
 const separator = {
+  display: 'inline-block',
   fontWeight: '400',
   fontSize: '12px',
   lineHeight: '16px',
   color: '#7C7E7C',
-  margin: '0 10px',
-};
-const footer__links = {
-  width: '300px',
-
-  margin: '30px 0 auto 0',
+  margin: '0 5px',
 };
 
 const body = {
-  padding: '40px',
+  padding: '40px 20px',
   backgroundColor: '#FFFFFF',
+  borderBottom: '1px solid #DCDCE0',
 };
 const body__title = {
   color: '#1E1E2E',

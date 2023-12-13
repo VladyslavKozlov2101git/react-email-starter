@@ -69,8 +69,27 @@ export const JobAlert = () => (
               <div>
                 <p style={job_bold_text}>Greyparrot</p>
                 <div>
-                  <img style={job_star} src={star} alt="star" />
+                  <div
+                    style={{
+                      display: 'inline-block',
+                      position: 'relative',
+                      width: '16px',
+                      height: '24px',
+                      verticalAlign: 'middle',
+                    }}>
+                    <img
+                      style={{
+                        position: 'absolute',
+                        width: '16px',
+                        height: '16px',
+                        top: '2px',
+                      }}
+                      src={star}
+                      alt="star"
+                    />
+                  </div>
                   <Text style={job_bold_text}>4.8 </Text>
+
                   <Text style={job_regular_text}>Sustainability score</Text>
                   <Text style={job_regular_text}>•</Text>
                   <Text style={job_bold_text}>77% </Text>
@@ -85,7 +104,25 @@ export const JobAlert = () => (
             <div style={job_location}>
               <Text style={job_bold_text}>£40k - £70k</Text>
               <Text style={job_regular_text}>•</Text>
-              <img style={job_regular_text} src={location} alt="location" />
+              <div
+                style={{
+                  display: 'inline-block',
+                  position: 'relative',
+                  width: '16px',
+                  height: '24px',
+                  verticalAlign: 'middle',
+                }}>
+                <img
+                  style={{
+                    position: 'absolute',
+                    width: '16px',
+                    height: '16px',
+                    top: '2px',
+                  }}
+                  src={location}
+                  alt="location"
+                />
+              </div>
               <Text style={job_regular_text}>London, England</Text>
             </div>
             <Text style={job_description}>
@@ -99,6 +136,8 @@ export const JobAlert = () => (
               See full job details
             </Button>
           </Section>
+
+          <hr style={job_separator} />
 
           <Section style={job_container}>
             <div>
@@ -117,8 +156,27 @@ export const JobAlert = () => (
               <div>
                 <p style={job_bold_text}>Greyparrot</p>
                 <div>
-                  <img style={job_star} src={star} alt="star" />
+                  <div
+                    style={{
+                      display: 'inline-block',
+                      position: 'relative',
+                      width: '16px',
+                      height: '24px',
+                      verticalAlign: 'middle',
+                    }}>
+                    <img
+                      style={{
+                        position: 'absolute',
+                        width: '16px',
+                        height: '16px',
+                        top: '2px',
+                      }}
+                      src={star}
+                      alt="star"
+                    />
+                  </div>
                   <Text style={job_bold_text}>4.8 </Text>
+
                   <Text style={job_regular_text}>Sustainability score</Text>
                   <Text style={job_regular_text}>•</Text>
                   <Text style={job_bold_text}>77% </Text>
@@ -133,7 +191,25 @@ export const JobAlert = () => (
             <div style={job_location}>
               <Text style={job_bold_text}>£40k - £70k</Text>
               <Text style={job_regular_text}>•</Text>
-              <img style={job_regular_text} src={location} alt="location" />
+              <div
+                style={{
+                  display: 'inline-block',
+                  position: 'relative',
+                  width: '16px',
+                  height: '24px',
+                  verticalAlign: 'middle',
+                }}>
+                <img
+                  style={{
+                    position: 'absolute',
+                    width: '16px',
+                    height: '16px',
+                    top: '2px',
+                  }}
+                  src={location}
+                  alt="location"
+                />
+              </div>
               <Text style={job_regular_text}>London, England</Text>
             </div>
             <Text style={job_description}>
@@ -256,8 +332,13 @@ const job_location = {
 
 const job_container = {
   padding: '40px 0',
+};
+
+const job_separator = {
+  border: '1px solid transparent',
   borderBottom: '1px solid #DCDCE0',
 };
+
 const job_description = {
   color: '#1E1E2E',
   fontSize: '16px',
@@ -273,11 +354,6 @@ const job_bold_text = {
   fontSize: '16px',
   lineHeight: '24px',
   fontWeight: 'bold',
-};
-
-const job_star = {
-  width: '16px',
-  height: '16px',
 };
 
 const job_regular_text = {

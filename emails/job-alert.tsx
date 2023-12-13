@@ -47,25 +47,35 @@ export const JobAlert = () => (
         </div>
 
         <Section style={body}>
-          <Heading style={body__title}>👋 Hello there!</Heading>
+          <h1 style={body__title}>
+            <span style={{ verticalAlign: 'text-bottom' }}>👋</span> Hello there!
+          </h1>
           <Text style={body__text}>We’ve found a job you may be interested in.</Text>
 
           {/* JOBS */}
 
           <Section style={job_container}>
             <div>
-              <img
+              <div
                 style={{
-                  borderRadius: '50%',
                   width: '48px',
-                  height: '48px',
+                  height: '60px',
                   margin: '0 12px 0 0 ',
-                  border: '1px solid #DCDCE0',
                   float: 'left',
-                }}
-                src={logo}
-                alt="logo"
-              />
+                }}>
+                <img
+                  style={{
+                    borderRadius: '50%',
+                    width: '48px',
+                    height: '48px',
+
+                    border: '1px solid #DCDCE0',
+                  }}
+                  src={logo}
+                  alt="logo"
+                />
+              </div>
+
               <div>
                 <p style={job_bold_text}>Greyparrot</p>
                 <div>
@@ -90,9 +100,9 @@ export const JobAlert = () => (
                   </div>
                   <Text style={job_bold_text}>4.8 </Text>
 
-                  <Text style={job_regular_text}>Sustainability score</Text>
-                  <Text style={job_regular_text}>•</Text>
-                  <Text style={job_bold_text}>77% </Text>
+                  <Text style={job_regular_text_score}>Sustainability score</Text>
+                  <Text style={job_regular_dot}>•</Text>
+                  <Text style={job_bold_text_percent}>77% </Text>
                   <Text style={job_regular_text}>Trust score</Text>
                 </div>
               </div>
@@ -141,18 +151,26 @@ export const JobAlert = () => (
 
           <Section style={job_container}>
             <div>
-              <img
+              <div
                 style={{
-                  borderRadius: '50%',
                   width: '48px',
-                  height: '48px',
+                  height: '60px',
                   margin: '0 12px 0 0 ',
-                  border: '1px solid #DCDCE0',
                   float: 'left',
-                }}
-                src={logo}
-                alt="logo"
-              />
+                }}>
+                <img
+                  style={{
+                    borderRadius: '50%',
+                    width: '48px',
+                    height: '48px',
+
+                    border: '1px solid #DCDCE0',
+                  }}
+                  src={logo}
+                  alt="logo"
+                />
+              </div>
+
               <div>
                 <p style={job_bold_text}>Greyparrot</p>
                 <div>
@@ -177,9 +195,9 @@ export const JobAlert = () => (
                   </div>
                   <Text style={job_bold_text}>4.8 </Text>
 
-                  <Text style={job_regular_text}>Sustainability score</Text>
-                  <Text style={job_regular_text}>•</Text>
-                  <Text style={job_bold_text}>77% </Text>
+                  <Text style={job_regular_text_score}>Sustainability score</Text>
+                  <Text style={job_regular_dot}>•</Text>
+                  <Text style={job_bold_text_percent}>77% </Text>
                   <Text style={job_regular_text}>Trust score</Text>
                 </div>
               </div>
@@ -228,13 +246,21 @@ export const JobAlert = () => (
         {/* FOOTER ELEMENT */}
 
         <Section style={footer}>
-          <Text style={text}>If you did not register this account, please ignore this email.</Text>
+          <Text style={text__top}>
+            You received this match based on your job alert criteria. To change your job alerts, go
+            to your{' '}
+            <Link style={bold} href="random_email@example.com">
+              profile.
+            </Link>
+          </Text>
+
           <Text style={text}>
             This message was sent to{' '}
             <Link style={bold} href="random_email@example.com">
               random_email@example.com
             </Link>
           </Text>
+
           <div style={{ display: 'inline-block', margin: '30px 0 0 0' }}>
             <Link style={bold} href="random_email@example.com">
               Contact us
@@ -263,14 +289,25 @@ const main = {
 };
 
 const container = {
+  maxWidth: '600px',
+  width: '100%',
   backgroundColor: '#ffffff',
   margin: '0 auto',
   marginBottom: '64px',
 };
 
 const footer = {
-  padding: '40px 20px',
+  padding: '40px 7.5%',
   backgroundColor: '#F5F6F8',
+};
+
+const text__top = {
+  fontWeight: '400',
+  fontSize: '12px',
+  lineHeight: '16px',
+  color: '#7C7E7C',
+  margin: '0 0 24px 0',
+  maxWidth: '440px',
 };
 
 const text = {
@@ -299,7 +336,7 @@ const separator = {
 };
 
 const body = {
-  padding: '40px 20px',
+  padding: '40px 7.5%',
   backgroundColor: '#FFFFFF',
   borderBottom: '1px solid #DCDCE0',
 };
@@ -356,9 +393,36 @@ const job_bold_text = {
   fontWeight: 'bold',
 };
 
+const job_bold_text_percent = {
+  display: 'inline-block',
+  margin: '0 8px 0 20px',
+  color: '#1E1E2E',
+  fontSize: '16px',
+  lineHeight: '24px',
+  fontWeight: 'bold',
+};
+
 const job_regular_text = {
   display: 'inline-block',
   margin: '0 8px 0 0 ',
+  color: '#7C7E7C',
+  fontSize: '16px',
+  lineHeight: '24px',
+  fontWeight: '400',
+};
+
+const job_regular_text_score = {
+  display: 'inline-block',
+  margin: '0 20px 0 0 ',
+  color: '#7C7E7C',
+  fontSize: '16px',
+  lineHeight: '24px',
+  fontWeight: '400',
+};
+
+const job_regular_dot = {
+  display: 'inline-block',
+  margin: '0',
   color: '#7C7E7C',
   fontSize: '16px',
   lineHeight: '24px',

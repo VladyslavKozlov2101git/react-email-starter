@@ -43,7 +43,9 @@ export const ActivateEmail = () => (
         </div>
 
         <Section style={body}>
-          <Heading style={body__title}>👋 Welcome, Serhiy!</Heading>
+          <h1 style={body__title}>
+            <span style={{ verticalAlign: 'text-bottom' }}>👋</span> Welcome, Serhiy!
+          </h1>
           <Text style={body__text}>
             We’re so glad that you’re now a member of the GreenerTides community. To get started,
             you need to confirm your email address by clicking the button below.
@@ -93,19 +95,16 @@ const main = {
   margin: '0 !important',
 };
 
-const header = {
-  height: '128px',
-  width: '100%',
-};
-
 const container = {
+  maxWidth: '600px',
+  width: '100%',
   backgroundColor: '#ffffff',
   margin: '0 auto',
   marginBottom: '64px',
 };
 
 const footer = {
-  padding: '40px 20px',
+  padding: '40px 7.5%',
   backgroundColor: '#F5F6F8',
 };
 
@@ -135,7 +134,7 @@ const separator = {
 };
 
 const body = {
-  padding: '40px 20px',
+  padding: '40px 7.5%',
   backgroundColor: '#FFFFFF',
   borderBottom: '1px solid #DCDCE0',
 };

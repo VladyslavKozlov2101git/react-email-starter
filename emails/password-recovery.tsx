@@ -43,7 +43,9 @@ export const PasswordRecovery = () => (
         </div>
 
         <Section style={body}>
-          <Heading style={body__title}>👋 Hello, Serhiy!</Heading>
+          <h1 style={body__title}>
+            <span style={{ verticalAlign: 'text-bottom' }}>👋</span> Hello, Serhiy!
+          </h1>
           <Text style={body__text}>
             We’ve received your password reset request. To complete password recovery, click the
             button:
@@ -91,19 +93,16 @@ const main = {
   margin: '0 !important',
 };
 
-const header = {
-  height: '128px',
-  width: '100%',
-};
-
 const container = {
+  maxWidth: '600px',
+  width: '100%',
   backgroundColor: '#ffffff',
   margin: '0 auto',
   marginBottom: '64px',
 };
 
 const footer = {
-  padding: '40px 20px',
+  padding: '40px 7.5%',
   backgroundColor: '#F5F6F8',
 };
 
@@ -133,7 +132,7 @@ const separator = {
 };
 
 const body = {
-  padding: '40px 20px',
+  padding: '40px 7.5%',
   backgroundColor: '#FFFFFF',
   borderBottom: '1px solid #DCDCE0',
 };

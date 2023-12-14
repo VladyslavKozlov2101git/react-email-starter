@@ -18,6 +18,7 @@ const headerTitle = 'https://greenertides.4-com.pro/letter__header.jpg';
 const location = 'https://greenertides.4-com.pro/letter__location.png';
 const logo = 'https://greenertides.4-com.pro/letter__test.png';
 const star = 'https://greenertides.4-com.pro/letter__rating.png';
+const star__disabled = 'https://greenertides.4-com.pro/letter__disabled__rating.png';
 
 export const JobAlert = () => (
   <Html>
@@ -189,16 +190,12 @@ export const JobAlert = () => (
                         height: '16px',
                         top: '2px',
                       }}
-                      src={star}
+                      src={star__disabled}
                       alt="star"
                     />
                   </div>
-                  <Text style={job_bold_text}>4.8 </Text>
 
-                  <Text style={job_regular_text_score}>Sustainability score</Text>
-                  <Text style={job_regular_dot}>•</Text>
-                  <Text style={job_bold_text_percent}>77% </Text>
-                  <Text style={job_regular_text}>Trust score</Text>
+                  <Text style={job_regular_text_score}>No scored yet</Text>
                 </div>
               </div>
             </div>
